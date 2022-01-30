@@ -10,13 +10,12 @@ export async function getServerSideProps(context) {
 		props: {
 			product,
 			shopInfos: infos
-		}, // will be passed to the page component as props
+		}
 	}
 }
 
 const Product = ({ product, shopInfos }) => {
 	const {moneyFormat} = shopInfos
-	console.log("=========> - product", product)
 	const variant = product.variants[0]
 	const sizes = product.options.find(opt => opt.name === "Size")
 	return (
