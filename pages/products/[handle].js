@@ -1,3 +1,4 @@
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { formatMoney } from '../../utils/format-money'
 import { client } from '../../utils/shopify-client'
@@ -109,6 +110,7 @@ const Product = ({ product, shopInfos }) => {
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</>
 	)
 }

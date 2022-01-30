@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ProductCard from '../components/ProductCard';
 import { client } from '../utils/shopify-client';
@@ -34,12 +35,17 @@ export default function Home({ shopInfos, products }) {
 		<>
 			<Header />
 			<section className="text-gray-600 body-font">
-				<div className="container px-5 py-24 mx-auto">
+				<div className="flex flex-col text-center w-full mt-20 px-20">
+					<h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">NextJS Shopify Storefront</h1>
+					<p className="lg:w-2/3 mx-auto leading-relaxed text-base">A custom Shopify storefront built with NextJS, Shopify Buy SDK and TailwindCSS</p>
+				</div>
+				<div className="container px-5 py-24 mx-auto mb-20">
 					<div className="flex flex-wrap -m-4">
 						{products.map(pro => <ProductCard key={pro.id} product={pro} moneyFormat={shopInfos.moneyFormat} />)}
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</>
 	)
 }
