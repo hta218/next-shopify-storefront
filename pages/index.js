@@ -2,7 +2,7 @@ import Header from '../components/Header';
 import ProductCard from '../components/ProductCard';
 import { client } from '../utils/shopify-client';
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async () => {
 	const products = await client.product.fetchAll(); // Fetch product
 	const infos = await client.shop.fetchInfo(); // Fetch shop Info if you think about SEO and title and ... to your page
 	const policies = await client.shop.fetchPolicies(); // fetch shop policy if you have any
@@ -16,6 +16,8 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Home({ infos, policies, products }) {
+  console.log("=========> - infos", infos)
+  console.log("=========> - products", products)
 	return (
 		<>
 			<Header />
