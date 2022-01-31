@@ -35,11 +35,11 @@ export default function Home({ shopInfos, products }) {
 		<>
 			<Header />
 			<section className="text-gray-600 body-font">
-				<div className="flex flex-col text-center w-full mt-20 px-20">
+				<div className="flex flex-col text-center w-full mt-10 lg:mt-20 px-20">
 					<h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">NextJS Shopify Storefront</h1>
 					<p className="lg:w-2/3 mx-auto leading-relaxed text-base">A custom Shopify storefront built with NextJS, Shopify Buy SDK and TailwindCSS</p>
 				</div>
-				<div className="container px-5 py-24 mx-auto mb-20">
+				<div className="container px-5 py-12 lg:py-24 mx-auto mb-20">
 					<div className="flex flex-wrap -m-4">
 						{products.map(pro => <ProductCard key={pro.id} product={pro} moneyFormat={shopInfos.moneyFormat} />)}
 					</div>

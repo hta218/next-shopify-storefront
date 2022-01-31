@@ -36,8 +36,8 @@ const Product = ({ product, shopInfos }) => {
 	return (
 		<>
 			<Header />
-			<section className="text-gray-600 body-font">
-				<div className="container px-5 py-24 mx-auto">
+			<section className="text-gray-600 body-font pb-20">
+				<div className="container px-5 py-12 lg:py-24 mx-auto">
 					<div className="lg:w-4/5 mx-auto flex flex-wrap">
 						<div className="lg:w-1/2">
 							{
